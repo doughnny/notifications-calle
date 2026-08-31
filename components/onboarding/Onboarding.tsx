@@ -17,7 +17,7 @@ export function Onboarding({ onComplete }: { onComplete: () => void }) {
     <div className="relative flex-1 min-w-0 h-full bg-[#d8d8d5] border-[1.5px] border-[#8d8d88] rounded-md overflow-hidden font-mono">
       <MenuBar currentTime={clockTime} onTimeChange={setClockTime} />
 
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 z-20 flex items-center justify-center">
         <OnboardingCard onSkip={onComplete}>
           {step === 0 && <SplashStep onNext={() => setStep(1)} />}
           {step === 1 && <PermissionsStep onNext={() => setStep(2)} />}
